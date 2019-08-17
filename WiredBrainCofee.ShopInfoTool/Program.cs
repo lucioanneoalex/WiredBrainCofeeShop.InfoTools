@@ -11,6 +11,8 @@ namespace WiredBrainCofee.ShopInfoTool
 
             Console.WriteLine("write help to show a list of commands, or write quit to break");
 
+            Console.WriteLine("write help to show a list of commands from user 1");
+
             var coffeeShopDataProvider = new CoffeShopDataProvider();
             while (true)
             {
