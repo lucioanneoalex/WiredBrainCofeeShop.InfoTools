@@ -7,7 +7,9 @@ namespace WiredBrainCofee.ShopInfoTool
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Wired Brain!");
+            Console.WriteLine("Hello Wired Brain! ");
+
+            Console.WriteLine("write help to show a list of commands, or write quit to break");
 
             var coffeeShopDataProvider = new CoffeShopDataProvider();
             while (true)
@@ -15,6 +17,11 @@ namespace WiredBrainCofee.ShopInfoTool
                 var line = Console.ReadLine();
 
                 var coffeeShops = coffeeShopDataProvider.LoadCoffeeShops();
+
+                if (string.Equals("quit", line, StringComparison.OrdinalIgnoreCase))
+                {
+                    break;
+                }
 
                 if (string.Equals("help", line, StringComparison.OrdinalIgnoreCase))
                 {
